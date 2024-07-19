@@ -1,0 +1,19 @@
+﻿  Reading Qt configuration (D:/QT/5.9.9/msvc2017_64/bin/qmake)
+  LocalClientA.cpp
+  LocalClientB.cpp
+  LocalClientC.cpp
+  TRBaseActionEx.cpp
+  TRBaseControl.cpp
+  TRDataDistribution.cpp
+  TRPublicRegister.cpp
+  TRBaseAction.cpp
+  TRLIB.cpp
+  main.cpp
+  qrc_TRLIB.cpp
+  moc_TRLIB.cpp
+  moc_TRBaseActionEx.cpp
+  moc_LocalClientB.cpp
+  moc_LocalClientA.cpp
+  moc_TRDataDistribution.cpp
+  moc_TRBaseControl.cpp
+LINK : fatal error LNK1104: 无法打开文件“MvCameraControl.lib”

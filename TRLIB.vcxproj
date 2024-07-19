@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D1B0A588-56DA-4636-9350-5BB76DF2C3C5}</ProjectGuid>
+    <Keyword>QtVS_v303</Keyword>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <IncludePath>D:\项目\2023双目\StereoTracking\StereoTracking\3rd_x64\yolo\include;D:\项目\2023双目\StereoTracking\StereoTracking\3rd_x64\Json;D:\项目\2023双目\StereoTracking\StereoTracking\3rd_x64\FgDetector;D:\项目\2023双目\StereoTracking\StereoTracking\3rd_x64\HkCamera\include;D:\项目\2023双目\StereoTracking\StereoTracking\3rd_x64\NumCpp\include;D:\项目\2023双目\StereoTracking\StereoTracking\3rd_x64\NumCpp;D:\Opencv\opencv\x64\vc15\lib;D:\Opencv\opencv\include\opencv2;D:\Opencv\opencv\include\opencv;D:\Opencv\opencv\include;D:\项目\2023双目\StereoTracking\StereoTracking\3rd_x64\opencv\include\opencv2;D:\项目\2023双目\StereoTracking\StereoTracking\3rd_x64\opencv\include\opencv;D:\项目\2023双目\StereoTracking\StereoTracking\3rd_x64\opencv\include;D:\QT\5.9.9\msvc2017_64\include;$(IncludePath);$(ProjectDir)</IncludePath>
+    <ExecutablePath>D:\QT\5.9.9\msvc2017_64\include;$(ExecutablePath)</ExecutablePath>
+    <LibraryPath>D:\项目\2023双目\StereoTracking\StereoTracking\3rd_x64\yolo\lib;D:\项目\2023双目\StereoTracking\StereoTracking\3rd_x64\HkCamera\lib;D:\Opencv\opencv\x64\vc15\lib;D:\Opencv\opencv\x64\vc15;D:\项目\2023双目\StereoTracking\StereoTracking\3rd_x64\opencv\x64\vc15\lib;D:\项目\2023双目\StereoTracking\StereoTracking\3rd_x64\opencv\x64\vc15;D:\QT\5.9.9\msvc2017_64\lib;$(LibraryPath)</LibraryPath>
+    <ExternalIncludePath>D:\QT\5.9.9\msvc2017_64\include;$(ExternalIncludePath)</ExternalIncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\with_path\boost_1_67_0;D:\Opencv\opencv\x64\vc15\lib;D:\QT\5.9.9\msvc2017_64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opencv_world342d.lib;opencv_world342.lib;MvCameraControl.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\with_path\boost_1_67_0\Boost64\lib;D:\Opencv\opencv\x64\vc15\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
+    <QtInstall>5.9.9_msvc2017_64</QtInstall>
+    <QtModules>core;gui;uitools;widgets;concurrent</QtModules>
+    <QtBuildConfig>debug</QtBuildConfig>
+    <QtHeaderSearchPath>D:\QT\5.9.9\msvc2017_64\include;$(QtHeaderSearchPath)</QtHeaderSearchPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
+    <QtInstall>msvc2017_64</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+    <QtBuildConfig>release</QtBuildConfig>
+  </PropertyGroup>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <Optimization>MaxSpeed</Optimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="LocalClientA.cpp" />
+    <ClCompile Include="LocalClientB.cpp" />
+    <ClCompile Include="LocalClientC.cpp" />
+    <ClCompile Include="TRBaseActionEx.cpp" />
+    <ClCompile Include="TRBaseControl.cpp" />
+    <ClCompile Include="TRDataDistribution.cpp" />
+    <ClCompile Include="TRPublicRegister.cpp" />
+    <QtRcc Include="TRLIB.qrc" />
+    <QtUic Include="TRLIB.ui" />
+    <ClCompile Include="TRBaseAction.cpp" />
+    <ClCompile Include="TRLIB.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="TRLIB.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="TRBaseActionEx.h" />
+    <QtMoc Include="LocalClientB.h" />
+    <ClInclude Include="LocalClientC.h" />
+    <ClInclude Include="TR_test_global.h" />
+    <QtMoc Include="LocalClientA.h" />
+    <ClInclude Include="TRAbstractAction.h" />
+    <ClInclude Include="TRAbstractControl.h" />
+    <ClInclude Include="TRBaseAction.h" />
+    <ClInclude Include="TR_global.h" />
+    <QtMoc Include="TRDataDistribution.h" />
+    <QtMoc Include="TRBaseControl.h" />
+    <ClInclude Include="TRPublicRegister.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
